@@ -1,6 +1,6 @@
-extern crate gl;
-extern crate glfw;
-extern crate cgmath;
+pub extern crate gl;
+pub extern crate glfw;
+pub extern crate cgmath;
 
 pub mod lang;
 pub mod camera;
