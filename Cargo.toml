@@ -1,0 +1,9 @@
+[package]
+name = "reactor_engine"
+version = "0.0.1"
+authors = ["XX <freecoder.xx@gmail.com>"]
+
+[dependencies]
+gl = "0.10"
+glfw = "0.23"
+cgmath = "0.16"
