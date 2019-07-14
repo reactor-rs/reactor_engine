@@ -58,7 +58,7 @@ impl Window {
         }
     }
 
-    pub fn events_loop<F: Fn(&mut Window) -> ()>(&mut self, render: Option<F>) {
+    pub fn events_loop<F: FnMut(&mut Window) -> ()>(&mut self, mut render: Option<F>) {
         let events = mem::replace(&mut self.events, None);
 
         while !self.window.should_close() {
@@ -73,7 +73,7 @@ impl Window {
             self.process_input();
 
             // ## render
-            if let Some(ref render) = render {
+            if let Some(ref mut render) = render {
                 render(self);
             } else {
                 self.render();
