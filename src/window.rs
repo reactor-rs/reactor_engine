@@ -167,6 +167,10 @@ impl Window {
         &self.window
     }
 
+    pub fn glfw_window_mut(&mut self) -> &mut GlfwWindow {
+        &mut self.window
+    }
+
     fn render(&mut self) {
         unsafe {
             gl::ClearColor(0.2, 0.3, 0.3, 1.0);
