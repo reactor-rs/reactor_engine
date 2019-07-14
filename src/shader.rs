@@ -11,6 +11,7 @@ use gl::types::*;
 use cgmath::{Matrix, Matrix4, Vector3};
 use cgmath::prelude::*;
 
+#[derive(Default, Debug, Copy, Clone, PartialEq, Eq)]
 pub struct Shader {
     pub ID: u32,
 }

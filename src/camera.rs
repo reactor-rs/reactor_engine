@@ -5,6 +5,7 @@ use glfw::{Action, Key, MouseButtonLeft, Window};
 use lang::{Float, TimeSec, Point3, Vector3, Matrix4, Direction};
 use input::{InputControl, KeyEvent, MouseEvent};
 
+#[derive(Debug, Clone, PartialEq)]
 pub struct Camera {
     // Camera Attributes
     pub position: Point3,
